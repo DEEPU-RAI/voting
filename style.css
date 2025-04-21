@@ -1,52 +1,74 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: #f4f4f4;
+  background: linear-gradient(135deg, #f0f8ff, #e0eafc);
   color: #333;
 }
 
 .container {
-  max-width: 800px;
-  margin: 40px auto;
+  max-width: 900px;
+  margin: 50px auto;
   text-align: center;
 }
 
 h1 {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+  color: #003366;
 }
 
 .cards {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 30px;
 }
 
 .card {
-  background: #fff;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  width: 250px;
-  transition: transform 0.2s;
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 280px;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  position: relative;
 }
 
 .card:hover {
-  transform: scale(1.03);
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
-.vote-btn {
+.vote-btn,
+.vote-again-btn {
   background-color: #007bff;
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 10px 25px;
   border-radius: 8px;
   font-size: 16px;
+  margin-top: 15px;
   cursor: pointer;
-  margin-top: 10px;
-  transition: background 0.3s;
+  transition: background 0.3s ease;
+}
+
+.vote-again-btn {
+  background-color: #28a745;
+  margin-left: 10px;
 }
 
 .vote-btn:hover {
   background-color: #0056b3;
+}
+
+.vote-again-btn:hover {
+  background-color: #1e7e34;
+}
+
+.vote-message {
+  font-weight: bold;
+  margin: 15px 0;
+  color: #555;
+  font-size: 1.1rem;
+  min-height: 24px;
 }
