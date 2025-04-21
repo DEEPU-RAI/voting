@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Voting App</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
@@ -12,17 +12,15 @@
     <div class="cards">
       <div class="card" data-id="Candidate 1">
         <h2>🎯 Candidate 1</h2>
-        <p class="vote-message">Ready to vote!</p>
         <button class="vote-btn">Vote</button>
-        <button class="vote-again-btn" style="display:none;">Vote Again</button>
       </div>
       <div class="card" data-id="Candidate 2">
         <h2>🚀 Candidate 2</h2>
-        <p class="vote-message">Ready to vote!</p>
         <button class="vote-btn">Vote</button>
-        <button class="vote-again-btn" style="display:none;">Vote Again</button>
       </div>
     </div>
+    <p class="vote-message"></p>
+    <button id="resetBtn" style="display: none;">🔁 Vote Again</button>
   </div>
   <script src="script.js"></script>
 </body>
