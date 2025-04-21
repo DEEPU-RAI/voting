@@ -1,22 +1,21 @@
-document.querySelectorAll(".card").forEach(card => {
-  const voteBtn = card.querySelector(".vote-btn");
-  const voteAgainBtn = card.querySelector(".vote-again-btn");
-  const voteMsg = card.querySelector(".vote-message");
-  const candidate = card.dataset.id;
+const voteButtons = document.querySelectorAll(".vote-btn");
+const voteMessage = document.querySelector(".vote-message");
+const resetBtn = document.getElementById("resetBtn");
 
-  voteBtn.addEventListener("click", () => {
-    voteBtn.disabled = true;
-    voteBtn.textContent = "Voted ✔️";
-    voteMsg.textContent = `✅ You have voted for ${candidate}`;
-    setTimeout(() => {
-      voteAgainBtn.style.display = "inline-block";
-    }, 2000);
+voteButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    const candidate = button.closest(".card").dataset.id;
+    voteMessage.textContent = `✅ You have voted for ${candidate}.`;
+    voteButtons.forEach(btn => btn.disabled = true);
+    resetBtn.style.display = "inline-block";
   });
+});
 
-  voteAgainBtn.addEventListener("click", () => {
-    voteBtn.disabled = false;
-    voteBtn.textContent = "Vote";
-    voteMsg.textContent = "Ready to vote!";
-    voteAgainBtn.style.display = "none";
+resetBtn.addEventListener("click", () => {
+  voteButtons.forEach(btn => {
+    btn.disabled = false;
+    btn.textContent = "Vote";
   });
+  voteMessage.textContent = "";
+  resetBtn.style.display = "none";
 });
