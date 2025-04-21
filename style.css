@@ -22,6 +22,7 @@ h1 {
   justify-content: center;
   flex-wrap: wrap;
   gap: 30px;
+  margin-bottom: 20px;
 }
 
 .card {
@@ -39,36 +40,45 @@ h1 {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
-.vote-btn,
-.vote-again-btn {
+.vote-btn {
   background-color: #007bff;
   color: white;
   border: none;
   padding: 10px 25px;
   border-radius: 8px;
   font-size: 16px;
-  margin-top: 15px;
   cursor: pointer;
   transition: background 0.3s ease;
 }
 
-.vote-again-btn {
-  background-color: #28a745;
-  margin-left: 10px;
-}
-
-.vote-btn:hover {
+.vote-btn:hover:enabled {
   background-color: #0056b3;
 }
 
-.vote-again-btn:hover {
-  background-color: #1e7e34;
+.vote-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
 }
 
 .vote-message {
   font-weight: bold;
-  margin: 15px 0;
-  color: #555;
-  font-size: 1.1rem;
-  min-height: 24px;
+  margin: 20px auto;
+  font-size: 1.2rem;
+  color: #2e8b57;
+}
+
+#resetBtn {
+  margin-top: 20px;
+  padding: 10px 25px;
+  font-size: 16px;
+  background-color: #28a745;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+#resetBtn:hover {
+  background-color: #218838;
 }
